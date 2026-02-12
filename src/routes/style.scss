@@ -1,0 +1,80 @@
+@font-face {
+	font-family: "Montserrat";
+	src: url("$lib/assets/Montserrat-VariableFont_wght.ttf");
+}
+
+:root {
+	--background-0: #1d182b;
+	--background-1: #251d3a;
+	--background-2: #2a2550;
+
+	--accent-0: #e04d01;
+	--accent-1: #ff7700;
+
+	--default-text: white;
+
+	background-color: var(--background-1);
+	color: var(--default-text);
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	touch-action: pan-y;
+	height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--accent-1);
+}
+
+input[type="text"],
+input[type="password"] {
+	border: 2px solid var(--primary-1);
+	color: var(--default-text);
+	background: transparent;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+a,
+button {
+	transition: color 125ms ease-in-out;
+	color: var(--accent-1);
+	width: fit-content;
+	background: none;
+	border: none;
+	padding: 0;
+
+	&:hover {
+		color: var(--accent-0);
+		text-decoration: underline;
+	}
+}
+
+.island {
+	background-color: var(--theme-island);
+	border-radius: 20px;
+	width: fit-content;
+	padding: 20px;
+}
+
+.code {
+	background-color: #1f1d2a;
+	display: inline-block;
+	border-radius: 3px;
+	margin: 3px 0;
+	padding: 3px;
+}
+
+.error {
+	color: var(--theme-error);
+}
+
+p {
+	margin: 16px 0;
+}
