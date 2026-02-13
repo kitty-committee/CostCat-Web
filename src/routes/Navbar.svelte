@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ProfilePicture from "$lib/components/ProfilePicture.svelte";
 	import logo from "$lib/assets/logo.png";
+	import { page } from "$app/state";
 
 	let clientHeight = $state(0);
 </script>
@@ -12,7 +13,7 @@
 	</a>
 
 	<button style="margin-left: auto;">
-		<ProfilePicture user={2} />
+		<ProfilePicture user={page.data.session.id} />
 	</button>
 </nav>
 

@@ -6,7 +6,7 @@
 	export interface LinkListItem {
 		icon: IconDefinition;
 		label: string;
-		url: string;
+		href: string;
 	}
 </script>
 
@@ -16,7 +16,7 @@
 
 <div class="linklist">
 	{#each links as item}
-		<a href={item.url}>
+		<a href={item.href}>
 			<Fa icon={item.icon} />
 			{item.label}
 			<Fa icon={faChevronRight} />

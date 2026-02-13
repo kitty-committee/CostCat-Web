@@ -2,10 +2,12 @@
 	import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 	import LinkList from "$lib/components/LinkList.svelte";
 	import logo from "$lib/assets/logo.png";
+
+	let { data } = $props();
 </script>
 
-<div>
-	<h1 class="flexr aligned">
+<div class="flexc">
+	<h1 class="flexr aligned justified">
 		<img style="image-rendering: pixelated" src={logo} alt="CostCat logo" width="48" height="48" />
 		CostCat
 	</h1>
@@ -15,10 +17,11 @@
 <div class="flexc">
 	<h2>Groups</h2>
 	<LinkList
-		links={[
-			{ icon: faUserGroup, label: "Kitty Committee", url: `/${5}` },
-			{ icon: faUserGroup, label: "Kitty Committee", url: `/${5}` },
-		]}
+		links={data.groups.map((group) => ({
+			icon: faUserGroup,
+			label: group.name,
+			href: `/group?id=${group.id}`,
+		}))}
 	/>
 </div>
 
