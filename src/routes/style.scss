@@ -34,7 +34,7 @@ h6 {
 
 input[type="text"],
 input[type="password"] {
-	border: 2px solid var(--primary-1);
+	border: 2px solid var(--accent-1);
 	color: var(--default-text);
 	background: transparent;
 	border-radius: 10px;
@@ -57,7 +57,7 @@ button {
 }
 
 .island {
-	background-color: var(--theme-island);
+	background-color: var(--background-2);
 	border-radius: 20px;
 	width: fit-content;
 	padding: 20px;
@@ -72,9 +72,28 @@ button {
 }
 
 .error {
-	color: var(--theme-error);
+	color: #f55454;
 }
 
 p {
 	margin: 16px 0;
+}
+
+.flexr {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+
+	&.aligned {
+		align-items: center;
+	}
+
+	&.justified {
+		justify-content: center;
+	}
+}
+
+.flexc {
+	@extend .flexr;
+	flex-direction: column;
 }

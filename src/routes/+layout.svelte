@@ -7,6 +7,16 @@
 	let { children } = $props();
 </script>
 
-<Navbar />
+<div class="container">
+	<Navbar />
+	{@render children()}
+</div>
 
-{@render children()}
+<style lang="scss">
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+	}
+</style>
