@@ -10,6 +10,10 @@ declare global {
 				username: string;
 				fullName: string;
 			};
+			groups: {
+				id: number;
+				name: string;
+			}[];
 		}
 		// interface PageState {}
 		// interface Platform {}
