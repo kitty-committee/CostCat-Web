@@ -11,11 +11,6 @@ type Balances = {
 
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { group } = await parent();
-
-	const balances = (await cat(fetch, "https://cost.nathcat.net/staging/api/determineBalance", {
-		body: JSON.stringify({ group: group.id }),
-		method: "POST",
-	})) as Balances;
-
+	const balances = (await cat(fetch, `determineBalance?group=${group.id}`)) as Balances;
 	return { balances };
 };

@@ -1,8 +1,8 @@
 <script lang="ts">
-	let { user }: { user: number } = $props();
+	let { path }: { path: string } = $props();
 </script>
 
-<div class="pfp" style:--url="url(https://cdn.nathcat.net/pfps/{user}.png)"></div>
+<div class="pfp" style:--url="url(https://cdn.nathcat.net/pfps/{path})"></div>
 
 <style lang="scss">
 	.pfp {

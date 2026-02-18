@@ -20,7 +20,7 @@
 		links={data.groups.map((group) => ({
 			icon: faUserGroup,
 			label: group.name,
-			href: `/group?id=${group.id}`,
+			href: `/group/${group.id}`,
 		}))}
 	/>
 </div>

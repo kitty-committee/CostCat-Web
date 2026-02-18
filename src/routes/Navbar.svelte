@@ -13,7 +13,7 @@
 	</a>
 
 	<button style="margin-left: auto;">
-		<ProfilePicture user={page.data.session.id} />
+		<ProfilePicture path={page.data.session.pfpPath} />
 	</button>
 </nav>
 

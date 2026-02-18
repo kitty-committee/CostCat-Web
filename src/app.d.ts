@@ -5,19 +5,22 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		interface PageData {
+			groups: GroupPartial[];
 			session: {
 				id: number;
 				username: string;
 				fullName: string;
+				pfpPath: string;
 			};
-			groups: {
-				id: number;
-				name: string;
-			}[];
 		}
 		// interface PageState {}
 		// interface Platform {}
 	}
+}
+
+export interface GroupPartial {
+	id: number;
+	name: string;
 }
 
 export {};
