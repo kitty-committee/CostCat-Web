@@ -14,6 +14,6 @@ export const load: LayoutLoad = async ({ parent, params, fetch }) => {
 		method: "POST",
 	});
 
-	const group = { ...partial, members: response.members } as Group;
+	const group = { ...partial, members: [...response.members, response.owner] } as Group;
 	return { group };
 };

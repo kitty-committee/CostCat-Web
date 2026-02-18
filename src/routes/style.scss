@@ -63,6 +63,10 @@ button {
 	padding: 20px;
 }
 
+div.full {
+	width: 100%;
+}
+
 .code {
 	background-color: #1f1d2a;
 	display: inline-block;
@@ -90,6 +94,14 @@ p {
 
 	&.justified {
 		justify-content: center;
+	}
+
+	&.spaced {
+		justify-content: space-between;
+	}
+
+	&.wrap {
+		flex-wrap: wrap;
 	}
 }
 

@@ -10,8 +10,10 @@
 		border-radius: 50%;
 		position: relative;
 
-		min-width: 2rem;
-		min-height: 2rem;
+		min-width: 2em;
+		min-height: 2em;
+		max-width: 2em;
+		max-height: 2em;
 
 		background: linear-gradient(45deg, #e600ff 0%, #00ccff 100%);
 

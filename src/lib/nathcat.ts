@@ -4,7 +4,11 @@ interface NathcatInit extends RequestInit {
 	body?: any;
 }
 
-export async function cat(fetch: typeof globalThis.fetch, input: RequestInfo | URL, init?: NathcatInit) {
+export async function cat<T = any>(
+	fetch: typeof globalThis.fetch,
+	input: RequestInfo | URL,
+	init?: NathcatInit,
+): Promise<T> {
 	if (typeof input === "string" && !input.startsWith("http")) input = `https://cost.nathcat.net/staging/api/${input}`;
 	if (typeof init?.body === "object") init.body = JSON.stringify(init.body);
 

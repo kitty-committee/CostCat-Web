@@ -9,7 +9,9 @@
 
 <div class="container">
 	<Navbar />
-	{@render children()}
+	<main class="container">
+		{@render children()}
+	</main>
 </div>
 
 <style lang="scss">
@@ -18,5 +20,10 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 30px;
+	}
+
+	main {
+		padding: 0 10px;
+		width: 100%;
 	}
 </style>
