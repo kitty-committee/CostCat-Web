@@ -19,11 +19,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 30px;
+		gap: 20px;
 	}
 
 	main {
-		padding: 0 10px;
+		padding: 0 10px 10px 10px;
 		width: 100%;
 	}
 </style>

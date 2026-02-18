@@ -1,7 +1,10 @@
 <script lang="ts">
 	import ProfilePicture from "$lib/components/ProfilePicture.svelte";
+	import type { PageData } from "./$types";
 
-	let props: { fullName: string; pfpPath: string; balance: number; range: number } = $props();
+	type UserBalance = PageData["balances"][number];
+
+	let props: UserBalance & { range: number } = $props();
 	let width = $derived(Math.abs((props.balance / props.range) * 50));
 	let negative = $derived(props.balance < 0);
 </script>

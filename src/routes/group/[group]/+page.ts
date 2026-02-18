@@ -16,7 +16,6 @@ export const load: PageLoad = async ({ fetch, parent, params }) => {
 	]);
 
 	return {
-		balance: response.balance,
 		balances: group.members.map((member) => ({
 			balance: -(response.debts.find((e) => e.user == member.id)?.balance ?? -response.balance) * 0.01,
 			...member,

@@ -6,6 +6,10 @@
 	let { data } = $props();
 </script>
 
+<svelte:head>
+	<title>CostCat</title>
+</svelte:head>
+
 <div class="flexc">
 	<h1 class="flexr aligned justified">
 		<img style="image-rendering: pixelated" src={logo} alt="CostCat logo" width="48" height="48" />

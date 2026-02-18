@@ -23,13 +23,12 @@ body {
 	height: 100vh;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: var(--accent-1);
+.marginv {
+	margin: 10px 0;
+}
+
+.marginh {
+	margin: 0 10px;
 }
 
 input[type="text"],
@@ -108,4 +107,16 @@ p {
 .flexc {
 	@extend .flexr;
 	flex-direction: column;
+}
+
+@media (min-width: 600px) {
+	.mobile {
+		display: none;
+	}
+}
+
+@media (max-width: 600px) {
+	.desktop {
+		display: none;
+	}
 }

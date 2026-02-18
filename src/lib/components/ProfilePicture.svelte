@@ -6,7 +6,7 @@
 
 <style lang="scss">
 	.pfp {
-		display: block;
+		display: inline-block;
 		border-radius: 50%;
 		position: relative;
 

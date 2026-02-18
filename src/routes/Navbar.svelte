@@ -30,9 +30,11 @@
 		height: fit-content;
 		position: fixed;
 		padding: 10px;
+		z-index: 100;
 		width: 100%;
 
 		background-color: var(--background-2);
+		border-bottom: 1px solid var(--background-0);
 
 		&,
 		* {
