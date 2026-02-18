@@ -9,11 +9,14 @@ export const load: LayoutLoad = async ({ parent, params, fetch }) => {
 	const partial = groups.find((g) => g.id === parseInt(params.group));
 	if (!partial) error(404, "Group not found");
 
-	const response = await cat(fetch, "https://data.nathcat.net/data/get-group-members.php", {
-		body: { group: partial.id },
-		method: "POST",
-	});
+	const [transactions, response] = await Promise.all([
+		cat(fetch, `getTransactions?group=${partial.id}`),
+		cat(fetch, "https://data.nathcat.net/data/get-group-members.php", {
+			body: { group: partial.id },
+			method: "POST",
+		}),
+	]);
 
 	const group = { ...partial, members: [...response.members, response.owner] } as Group;
-	return { group };
+	return { group, transactions };
 };
